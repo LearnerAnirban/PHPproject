@@ -16,7 +16,7 @@ class person {
     $this->age = $a;
   }
 
-  // //simple mathod
+//simple mathod
   function show() {
     echo $this->name . " - " . $this->age;
   }
