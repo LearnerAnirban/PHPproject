@@ -1,0 +1,22 @@
+<?php 
+// sleep method
+
+class student {
+  public $course = "PHP";
+  private $first_name;
+  private $last_name;
+  public function setName ($fname, $lname) {
+    $this->first_name = $fname;
+    $this->last_name = $lname;
+  }
+  // sleep magic mathod
+  public function __sleep() {
+    return array('first_name', 'last_name');
+  }
+}
+
+$obj = new student();
+$obj->setName("Anirban", "Roy");
+// serialize method convarted an object to an array.
+$srl = serialize($obj);
+echo $srl;
